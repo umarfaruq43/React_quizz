@@ -1,17 +1,55 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Introduction } from "./Introduction.js";
+import { Preparation } from "./Preparation.js";
+import { Header } from "./Header.js";
+import { QuestionWraper } from "./Questions";
+import { Remark } from "./Remark";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const Correction = () => {
+  return (
+    <div className="container">
+      <h4 className="text-center">Review</h4>
+      <CorrectionData />
+    </div>
+  );
+};
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const CorrectionData = () => {
+  return (
+    <div>
+      <div>
+        <div>
+          <big> 1. </big>
+          <span> What is the nme of your father?</span>
+        </div>
+        <div>
+          {" "}
+          Correct: <span>Umar Faruq</span>
+        </div>
+      </div>
+
+      <div className="text-center mt-5">
+        <button className='btn btn-success'>Start Again</button>
+      </div>
+    </div>
+  );
+};
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Header />
+        {/* <Introduction />*/}
+        {/*<Preparation /> */}
+        {/* <QuestionWraper /> */}
+        {/* <Remark /> */}
+        <Correction />
+      </div>
+    );
+  }
+}
+
+const root = document.querySelector("#root");
+ReactDOM.render(<App />, root);
