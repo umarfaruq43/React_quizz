@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import "./style.css";
 
 const introStyle = {
-  height: "100vh",
+  height: "90vh",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",

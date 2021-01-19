@@ -41,11 +41,11 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        {/* <Introduction />*/}
-        {/*<Preparation /> */}
+        <Introduction />
+        {/* <Preparation /> */}
         {/* <QuestionWraper /> */}
         {/* <Remark /> */}
-        <Correction />
+        {/* <Correction /> */}
       </div>
     );
   }
